@@ -31,12 +31,12 @@ const VideoSection = () => {
 
           {/* Descarga app */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-5 mb-14">
-            <Button 
-              className="bg-gradient-gold hover:opacity-90 text-accent-foreground font-bold shadow-lg hidden sm:flex"
+            <Button
+              className="bg-gradient-gold hover:opacity-90 text-accent-foreground font-bold shadow-lg"
               onClick={() => navigate("/descargarapp")}
             >
               Descarga la App
-              <Smartphone className="w-5 h-5 mr-3 relative z-10" />
+              <Smartphone className="w-5 h-5 ml-2" />
             </Button>
           </div>
 

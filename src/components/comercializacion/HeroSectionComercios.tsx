@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Users, TrendingUp, Globe, Sparkles } from "lucide-react";
+import { ArrowRight, Users, TrendingUp, Globe } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import CountdownTimer from "./CountdownTimer";
+import MobileNavSheet from "@/components/MobileNavSheet";
 import stadiumHero from "@/assets/stadium-hero.jpg";
 
 interface HeroSectionComerciosProps {
@@ -10,6 +11,14 @@ interface HeroSectionComerciosProps {
 
 const HeroSectionComercios = ({ onRegisterClick }: HeroSectionComerciosProps) => {
   const navigate = useNavigate();
+
+  const navItems = [
+    { label: "Inicio", onClick: () => navigate("/") },
+    ...(onRegisterClick
+      ? [{ label: "Registra tu Negocio", onClick: onRegisterClick }]
+      : []),
+    { label: "Descarga la App", onClick: () => navigate("/descargarapp") },
+  ];
 
   return (
     <section className="relative min-h-screen overflow-hidden">
@@ -68,26 +77,7 @@ const HeroSectionComercios = ({ onRegisterClick }: HeroSectionComerciosProps) =>
               </span>
             </div>
           </div>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Button 
-              className="bg-gradient-gold hover:opacity-90 text-accent-foreground font-semibold shadow-lg hidden sm:flex"
-              onClick={() => navigate("/")}
-            >
-              Inicio
-            </Button>
-            <Button
-              className="bg-gradient-gold hover:opacity-90 text-accent-foreground font-semibold shadow-lg hidden sm:flex"
-              onClick={onRegisterClick}
-            >
-              Registra tu Negocio
-            </Button>
-            <Button 
-              className="bg-gradient-gold hover:opacity-90 text-accent-foreground font-bold shadow-lg hidden sm:flex"
-              onClick={() => navigate("/descargarapp")}
-            >
-              Descarga la App
-            </Button>
-          </div>
+          <MobileNavSheet items={navItems} />
         </nav>
 
         {/* Main content */}
