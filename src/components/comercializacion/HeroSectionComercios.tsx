@@ -83,7 +83,7 @@ const HeroSectionComercios = ({ onRegisterClick }: HeroSectionComerciosProps) =>
             </Button>
             <Button 
               className="bg-gradient-gold hover:opacity-90 text-accent-foreground font-bold shadow-lg hidden sm:flex"
-              onClick={() => navigate("/DescargarApp")}
+              onClick={() => navigate("/descargarapp")}
             >
               Descarga la App
             </Button>

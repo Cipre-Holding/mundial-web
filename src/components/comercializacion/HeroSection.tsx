@@ -66,15 +66,21 @@ const HeroSection = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Button 
               className="bg-gradient-gold hover:opacity-90 text-accent-foreground font-semibold shadow-lg hidden sm:flex"
-              onClick={() => navigate("/Comercios")}
+              onClick={() => navigate("/comercios")}
             >
               Tengo un negocio
             </Button>
             <Button 
               className="bg-gradient-gold hover:opacity-90 text-accent-foreground font-bold shadow-lg hidden sm:flex"
-              onClick={() => navigate("/DescargarApp")}
+              onClick={() => navigate("/descargarapp")}
             >
               Descarga la App
+            </Button>
+            <Button 
+              className="bg-gradient-gold hover:opacity-90 text-accent-foreground font-semibold shadow-lg hidden sm:flex"
+              onClick={() => navigate("/auth")}
+            >
+              Admin
             </Button>
           </div>
         </nav>

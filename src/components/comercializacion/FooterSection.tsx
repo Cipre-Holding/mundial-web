@@ -7,7 +7,7 @@ const FooterSection = () => {
   const navigate = useNavigate();
   
   const scrollToPlans = () => {
-    navigate("/Comercios");
+    navigate("/comercios");
     document.getElementById("planes")?.scrollIntoView({ behavior: "smooth" });
   };
 
@@ -48,9 +48,15 @@ const FooterSection = () => {
               </a>
               <Button 
                 className="bg-gradient-gold hover:opacity-90 text-accent-foreground font-bold shadow-lg hidden sm:flex"
-                onClick={() => navigate("/DescargarApp")}
-                >
+                onClick={() => navigate("/descargarapp")}
+              >
                 Descarga la App
+              </Button>
+              <Button 
+                className="bg-gradient-gold hover:opacity-90 text-accent-foreground font-bold shadow-lg hidden sm:flex"
+                onClick={() => navigate("/auth")}
+              >
+                Admin
               </Button>
             </div>
           </div>
@@ -61,7 +67,7 @@ const FooterSection = () => {
             <ul className="space-y-3">
               <li>
                 <button
-                  onClick={() => navigate("/Comercios")}
+                  onClick={() => navigate("/comercios")}
                   className="text-background/70 hover:text-accent transition-colors text-left"
                 >
                   Beneficios

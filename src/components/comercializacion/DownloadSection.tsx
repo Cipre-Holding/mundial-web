@@ -50,7 +50,7 @@ const DownloadSection = () => {
             
             <Button 
               className="bg-gradient-gold hover:opacity-90 text-accent-foreground font-bold shadow-lg hidden sm:flex"
-              onClick={() => navigate("/Comercios")}
+              onClick={() => navigate("/comercios")}
             >
               Tengo un Negocio
             </Button>
