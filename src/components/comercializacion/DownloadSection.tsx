@@ -8,18 +8,10 @@ const DownloadSection = () => {
   const navigate = useNavigate();
   
   return (
-    <section className="relative py-6 overflow-hidden bg-gradient-to-b from-[#050a12] via-[#0a1628] to-[#050a12]">
+    <section className="relative py-6 overflow-hidden bg-[#155831]">
       {/* Stadium lights effect */}
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-[120px]" />
       <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-green-500/5 rounded-full blur-[120px]" />
-      
-      {/* Pitch pattern */}
-      <div className="absolute inset-0 opacity-[0.03]">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] border-2 border-white rounded-full" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 rounded-full border-2 border-white" />
-        <div className="absolute top-1/2 left-0 w-32 h-64 border-2 border-white -translate-y-1/2" />
-        <div className="absolute top-1/2 right-0 w-32 h-64 border-2 border-white -translate-y-1/2" />
-      </div>
 
       <div className="container mx-auto px-4 relative">
         {/* Header */}
@@ -58,7 +50,7 @@ const DownloadSection = () => {
         </nav>
 
         {/* Phone Mockups */}
-        <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-16 mb-22 perspective-1000">
+        <div className="flex flex-col lg:flex-row items-center justify-center gap-2 lg:gap-8 mb-22 perspective-1000">
           {/* Phone - Large */}
           <img src={cel} className="w-72 h-auto lg:w-90 object-contain lg:-mt-12" />
 
@@ -67,6 +59,15 @@ const DownloadSection = () => {
             <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 tracking-tight">
                 Vive México App!
             </h2>
+
+            <h1 className="text-center text-2xl md:text-3xl lg:text-3.5xl xl:text-4xl font-black text-white mb-6 leading-[1.1] animate-fade-in tracking-tight drop-shadow-2xl" style={{ animationDelay: "0.1s" }}>
+              El fútbol te mueve, la app que te guía{" "}
+              <span className="relative inline-block">
+                <span className="text-gradient-gold">Partidos, mapas y recompensas</span>
+                <span className="absolute -inset-1 shimmer rounded-lg opacity-50" />
+              </span>
+            </h1>
+
             <img src={googleplay} className="w-48 lg:w-56 object-contain" />
             <img src={appstore} className="w-48 lg:w-56 object-contain" />
           </div>

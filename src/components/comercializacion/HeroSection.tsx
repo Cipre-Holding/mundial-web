@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Users, TrendingUp, Globe, Sparkles } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import CountdownTimer from "./CountdownTimer";
-import stadiumPeople from "@/assets/hero-3.png";
+import stadiumPeople from "@/assets/bg-hero.png";
 
 const HeroSection = () => {
   const navigate = useNavigate();

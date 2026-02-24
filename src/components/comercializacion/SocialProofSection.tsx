@@ -1,5 +1,5 @@
 import { Star, Quote } from "lucide-react";
-import bgQuote from "@/assets/bg-quote.png";
+import bgQuote from "@/assets/bg-quote.webp";
 import { Badge } from "@/components/ui/badge";
 
 const SocialProofSection = () => {
