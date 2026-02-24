@@ -1,11 +1,20 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Users, TrendingUp, Globe, Sparkles } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import CountdownTimer from "./CountdownTimer";
+import MobileNavSheet from "@/components/MobileNavSheet";
 import stadiumPeople from "@/assets/bg-hero.png";
+
 
 const HeroSection = () => {
   const navigate = useNavigate();
+
+  const navItems = [
+    { label: "Tengo un negocio", onClick: () => navigate("/comercios") },
+    { label: "Descarga la App", onClick: () => navigate("/descargarapp") },
+    { label: "Admin", onClick: () => navigate("/auth") },
+  ];
+
   return (
     <section className="relative min-h-screen overflow-hidden">
       {/* Background image with Ken Burns effect */}
@@ -63,20 +72,7 @@ const HeroSection = () => {
               </span>
             </div>
           </div>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Button 
-              className="bg-gradient-gold hover:opacity-90 text-accent-foreground font-semibold shadow-lg hidden sm:flex"
-              onClick={() => navigate("/Comercios")}
-            >
-              Tengo un negocio
-            </Button>
-            <Button 
-              className="bg-gradient-gold hover:opacity-90 text-accent-foreground font-bold shadow-lg hidden sm:flex"
-              onClick={() => navigate("/DescargarApp")}
-            >
-              Descarga la App
-            </Button>
-          </div>
+          <MobileNavSheet items={navItems} />
         </nav>
 
         {/* Main content */}

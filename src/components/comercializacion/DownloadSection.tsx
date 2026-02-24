@@ -1,12 +1,17 @@
-import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
+import MobileNavSheet from "@/components/MobileNavSheet";
 import cel from "@/assets/android.png";
 import googleplay from "@/assets/googleplay.svg";
 import appstore from "@/assets/appstore.svg";
 
 const DownloadSection = () => {
   const navigate = useNavigate();
-  
+
+  const navItems = [
+    { label: "Inicio", onClick: () => navigate("/") },
+    { label: "Tengo un Negocio", onClick: () => navigate("/comercios") },
+  ];
+
   return (
     <section className="relative py-6 overflow-hidden bg-[#155831]">
       {/* Stadium lights effect */}
@@ -32,21 +37,7 @@ const DownloadSection = () => {
               </span>
             </div>
           </div>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Button 
-              className="bg-gradient-gold hover:opacity-90 text-accent-foreground font-semibold shadow-lg hidden sm:flex"
-              onClick={() => navigate("/")}
-            >
-              Inicio
-            </Button>
-            
-            <Button 
-              className="bg-gradient-gold hover:opacity-90 text-accent-foreground font-bold shadow-lg hidden sm:flex"
-              onClick={() => navigate("/Comercios")}
-            >
-              Tengo un Negocio
-            </Button>
-          </div>
+          <MobileNavSheet items={navItems} />
         </nav>
 
         {/* Phone Mockups */}

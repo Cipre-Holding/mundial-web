@@ -1,7 +1,10 @@
 import { Gift, Smartphone, ExternalLink, Zap, Globe, Fingerprint, Video } from "lucide-react";
+
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { useNavigate } from "react-router-dom";
+
+import videoMundial from "@/assets/videoMundial.mp4";
 
 const VideoSection = () => {
   const navigate = useNavigate();
@@ -23,17 +26,17 @@ const VideoSection = () => {
           {/* Premium Floating Card */}
           <div className="relative max-w-3xl mx-auto mb-14 group">
             {/* Card */}
-            <video src="/assets/video.mp4" controls className="w-full h-auto rounded-2xl shadow-xl"></video>
+            <video src={videoMundial} controls className="w-full h-auto rounded-2xl shadow-xl" aria-label="Video promocional del Mundial del Bienestar"></video>
           </div>
 
           {/* Descarga app */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-5 mb-14">
-            <Button 
-              className="bg-gradient-gold hover:opacity-90 text-accent-foreground font-bold shadow-lg hidden sm:flex"
-              onClick={() => navigate("/DescargarApp")}
+            <Button
+              className="bg-gradient-gold hover:opacity-90 text-accent-foreground font-bold shadow-lg"
+              onClick={() => navigate("/descargarapp")}
             >
               Descarga la App
-              <Smartphone className="w-5 h-5 mr-3 relative z-10" />
+              <Smartphone className="w-5 h-5 ml-2" />
             </Button>
           </div>
 

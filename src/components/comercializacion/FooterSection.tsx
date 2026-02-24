@@ -7,7 +7,7 @@ const FooterSection = () => {
   const navigate = useNavigate();
   
   const scrollToPlans = () => {
-    navigate("/Comercios");
+    navigate("/comercios");
     document.getElementById("planes")?.scrollIntoView({ behavior: "smooth" });
   };
 
@@ -27,31 +27,44 @@ const FooterSection = () => {
               La plataforma líder para conectar negocios mexicanos con los millones 
               de turistas que visitarán México durante el Mundial.
             </p>
-            <div className="flex gap-4">
-              <a
-                href="#"
-                className="w-10 h-10 rounded-full bg-background/10 flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-colors"
-              >
-                <Instagram className="h-5 w-5" />
-              </a>
-              <a
-                href="#"
-                className="w-10 h-10 rounded-full bg-background/10 flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-colors"
-              >
-                <Facebook className="h-5 w-5" />
-              </a>
-              <a
-                href="#"
-                className="w-10 h-10 rounded-full bg-background/10 flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-colors"
-              >
-                <Twitter className="h-5 w-5" />
-              </a>
-              <Button 
-                className="bg-gradient-gold hover:opacity-90 text-accent-foreground font-bold shadow-lg hidden sm:flex"
-                onClick={() => navigate("/DescargarApp")}
+            <div className="flex flex-col sm:flex-row sm:items-center gap-4">
+              <div className="flex gap-4">
+                <a
+                  href="#"
+                  className="w-10 h-10 rounded-full bg-background/10 flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-colors"
+                  aria-label="Instagram"
                 >
-                Descarga la App
-              </Button>
+                  <Instagram className="h-5 w-5" />
+                </a>
+                <a
+                  href="#"
+                  className="w-10 h-10 rounded-full bg-background/10 flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-colors"
+                  aria-label="Facebook"
+                >
+                  <Facebook className="h-5 w-5" />
+                </a>
+                <a
+                  href="#"
+                  className="w-10 h-10 rounded-full bg-background/10 flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-colors"
+                  aria-label="Twitter"
+                >
+                  <Twitter className="h-5 w-5" />
+                </a>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-2 sm:gap-4">
+                <Button
+                  className="bg-gradient-gold hover:opacity-90 text-accent-foreground font-bold shadow-lg w-full sm:w-auto"
+                  onClick={() => navigate("/descargarapp")}
+                >
+                  Descarga la App
+                </Button>
+                <Button
+                  className="bg-gradient-gold hover:opacity-90 text-accent-foreground font-bold shadow-lg w-full sm:w-auto"
+                  onClick={() => navigate("/auth")}
+                >
+                  Admin
+                </Button>
+              </div>
             </div>
           </div>
 
@@ -61,7 +74,7 @@ const FooterSection = () => {
             <ul className="space-y-3">
               <li>
                 <button
-                  onClick={() => navigate("/Comercios")}
+                  onClick={() => navigate("/comercios")}
                   className="text-background/70 hover:text-accent transition-colors text-left"
                 >
                   Beneficios

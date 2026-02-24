@@ -1,3 +1,6 @@
+/**
+ * Página principal (landing) con secciones de comercialización.
+ */
 import HeroSection from "@/components/comercializacion/HeroSection";
 import AppShowcaseSection from "@/components/comercializacion/AppShowcaseSection";
 import BienestarSection from "@/components/comercializacion/BienestarSection";
