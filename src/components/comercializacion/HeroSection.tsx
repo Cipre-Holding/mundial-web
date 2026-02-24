@@ -3,7 +3,8 @@ import { ArrowRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import CountdownTimer from "./CountdownTimer";
 import MobileNavSheet from "@/components/MobileNavSheet";
-import stadiumPeople from "@/assets/hero-3.png";
+import stadiumPeople from "@/assets/bg-hero.png";
+
 
 const HeroSection = () => {
   const navigate = useNavigate();
