@@ -257,7 +257,7 @@ Storage: bucket `sales-materials` para archivos de la biblioteca de recursos.
 ## Diseño y tema
 
 - **Tema**: "Mundial 2026 México" — verde bandera (`--primary`), dorado (`--accent`), rojo.
-- **Tokens**: `--mundial-green`, `--mundial-red`, `--mundial-gold`, `--mundial-dark`, `--mundial-light`; `--plan-basic`, `--plan-featured`, `--plan-elite`; gradientes `--gradient-hero`, `--gradient-gold`, `--gradient-elite`.
+- **Tokens**: `--mundial-green`, `--mundial-red`, `--mundial-gold`, `--mundial-dark`, `--mundial-light`; `--plan-basic`, `--plan-featured`, `--plan-elite`; gradientes `--gradient-hero`, `--`, `--gradient-elite`.
 - **Animaciones**: `fade-in`, `slide-in-left`, `slide-in-right`, `scale-in`, `pulse-glow`, `countdown`, `accordion-down/up`; Ken Burns y partículas en el hero.
 - **Modo oscuro**: Clase `dark` con variables alternativas.
 - **Tipografía**: Inter.

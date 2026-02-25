@@ -63,16 +63,16 @@ const HeroSectionComercios = ({ onRegisterClick }: HeroSectionComerciosProps) =>
         <nav className="flex items-center justify-between mb-12 md:mb-20">
           <div className="flex items-center gap-3">
             <div className="relative">
-              <div className="w-14 h-14 bg-gradient-gold rounded-2xl flex items-center justify-center shadow-lg pulse-glow">
+              <div className="w-14 h-14 bg-gradient-orange rounded-2xl flex items-center justify-center shadow-lg pulse-glow">
                 <span className="text-3xl">⚽</span>
               </div>
               <div className="absolute -top-1 -right-1 w-4 h-4 bg-destructive rounded-full animate-pulse" />
             </div>
             <div className="flex flex-col">
-              <span className="text-2xl md:text-3xl font-bold text-white tracking-tight">
+              <span className="text-2xl md:text-3xl font-bold text-customcolors-redprimary tracking-tight">
                 Vive México
               </span>
-              <span className="text-xs text-accent font-semibold tracking-widest uppercase">
+              <span className="text-xs text-accent text-customcolors-orangeprimary font-semibold tracking-widest uppercase">
                 Negocios México
               </span>
             </div>
@@ -93,26 +93,26 @@ const HeroSectionComercios = ({ onRegisterClick }: HeroSectionComerciosProps) =>
             </span>
           </div>
 
-          <h1 className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-black text-white mb-6 leading-[1.1] animate-fade-in tracking-tight drop-shadow-2xl" style={{ animationDelay: "0.1s" }}>
+          <h1 className="anton-regular text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-black text-white mb-6 leading-[1.1] animate-fade-in tracking-tight drop-shadow-2xl" style={{ animationDelay: "0.1s" }}>
             Conecta tu negocio con{" "}
             <span className="relative inline-block">
-              <span className="text-gradient-gold">millones</span>
+              <span className="text-gradient-orange">millones</span>
               <span className="absolute -inset-1 shimmer rounded-lg opacity-50" />
             </span>
             <br className="hidden md:block" />
-            <span className="text-gradient-gold">de turistas</span>
+            <span className="text-gradient-orange">de turistas</span>
           </h1>
 
           <p className="text-lg md:text-xl lg:text-2xl text-white/80 mb-10 max-w-3xl mx-auto leading-relaxed animate-fade-in drop-shadow-lg" style={{ animationDelay: "0.2s" }}>
-            La plataforma definitiva para que <span className="text-accent font-semibold">restaurantes</span>, 
-            <span className="text-accent font-semibold"> entretenimiento</span> y <span className="text-accent font-semibold">comercios</span> lleguen 
+            La plataforma definitiva para que <span className="text-gradient-orange text-accent font-semibold">restaurantes</span>, 
+            <span className="text-accent text-gradient-orange font-semibold"> entretenimiento</span> y <span className="text-accent text-gradient-orange font-semibold">comercios</span> lleguen 
             a los visitantes del Mundial en México.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 animate-fade-in" style={{ animationDelay: "0.3s" }}>
             <Button 
               size="lg" 
-              className="bg-gradient-gold hover:opacity-90 text-accent-foreground text-lg px-10 py-7 font-bold shadow-xl pulse-glow rounded-2xl"
+              className="bg-gradient-orange hover:opacity-90 text-accent-foreground text-lg px-10 py-7 font-bold shadow-xl pulse-glow rounded-2xl"
               onClick={() => navigate("/")}
             >
               Sobre la Aplicación
@@ -120,7 +120,7 @@ const HeroSectionComercios = ({ onRegisterClick }: HeroSectionComerciosProps) =>
             </Button>
             <Button 
               size="lg" 
-              className="bg-gradient-gold hover:opacity-90 text-accent-foreground text-lg px-10 py-7 font-bold shadow-xl pulse-glow rounded-2xl"
+              className="bg-gradient-orange hover:opacity-90 text-accent-foreground text-lg px-10 py-7 font-bold shadow-xl pulse-glow rounded-2xl"
               onClick={onRegisterClick}
             >
               Afilia tu negocio
@@ -147,7 +147,7 @@ const HeroSectionComercios = ({ onRegisterClick }: HeroSectionComerciosProps) =>
                 key={index} 
                 className={`glass rounded-3xl p-8 text-center hover-3d group cursor-default ${stat.delay}`}
               >
-                <div className="w-16 h-16 rounded-2xl bg-gradient-gold flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform shadow-lg">
+                <div className="w-16 h-16 rounded-2xl bg-gradient-orange flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform shadow-lg">
                   <Icon className="h-8 w-8 text-accent-foreground" />
                 </div>
                 <div className="text-4xl md:text-5xl font-black text-white mb-2">

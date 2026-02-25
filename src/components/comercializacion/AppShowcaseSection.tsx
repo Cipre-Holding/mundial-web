@@ -11,19 +11,14 @@ const AppShowcaseSection = () => {
   ];
 
   return (
-    <section className="relative pt-32 pb-16 overflow-hidden bg-gradient-to-b from-[#050a12] from-15% via-[#0a1628] via-55% to-[#050a12] to-100%">
-      
-      {/* Pitch pattern */}
-      <div className="absolute inset-0 opacity-[0.03]">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] border-2 border-white rounded-full" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 rounded-full border-2 border-white" />
-        <div className="absolute top-1/2 left-0 w-32 h-64 border-2 border-white -translate-y-1/2" />
-        <div className="absolute top-1/2 right-0 w-32 h-64 border-2 border-white -translate-y-1/2" />
-      </div>
+    <section className="relative pt-20 pb-8 overflow-hidden bg-color-white">
 
-      <div className="container mx-auto px-4 relative z-10">
+      {/* Gradient transition from hero section */}
+      <div className="absolute top-0 left-0 right-0 h-[600px] pointer-events-none z-0" style={{ background: 'linear-gradient(to bottom, #050a12 0%, #050a12 20%, rgba(5,10,18,0.85) 45%, rgba(5,10,18,0.4) 70%, transparent 100%)' }} />
+
+      <div className="container mx-auto px-2 relative z-10">
         {/* Header */}
-        <div className="text-center mb-20">
+        <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-primary/20 to-green-500/20 text-primary px-5 py-2.5 rounded-full text-sm font-semibold mb-6 border border-primary/30">
             <Smartphone className="w-4 h-4" />
             App Oficial del Mundial del 2026
@@ -76,12 +71,12 @@ const AppShowcaseSection = () => {
           {features.map((feature, index) => (
             <div 
               key={feature.title}
-              className="group bg-gradient-to-b from-white/[0.08] to-white/[0.02] backdrop-blur-xl border border-white/10 rounded-2xl p-5 text-center hover:border-primary/30 transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:shadow-primary/10"
+              className="group bg-gradient-to-b from-primary/[0.08] to-primary/[0.02] backdrop-blur-xl border border-primary/10 rounded-2xl p-5 text-center hover:border-primary/30 transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:shadow-primary/10"
             >
               <div className="w-14 h-14 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 border border-primary/20">
                 <feature.icon className="w-7 h-7 text-primary" />
               </div>
-              <h3 className="text-white font-bold text-sm mb-1">{feature.title}</h3>
+              <h3 className="text-primary font-bold text-sm mb-1">{feature.title}</h3>
               <p className="text-gray-500 text-xs leading-relaxed">{feature.description}</p>
             </div>
           ))}

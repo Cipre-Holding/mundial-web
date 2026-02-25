@@ -5,9 +5,9 @@ import bienestarLogo from "@/assets/bienestar-logo.svg";
 const BienestarSection = () => {
 
   return (
-    <section className="relative pt-32 pb-16 overflow-hidden bg-gradient-to-b from-[#050a12] from-15% via-[#0a1628] via-55% to-[#050a12] to-100%">
+    <section className="relative pt-10 pb-16 overflow-hidden bg-color-white">
       
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mx-auto px-2 relative z-10">
         <div className="max-w-7xl mx-auto">
           {/* Layout: Card + Right sidebar */}
           <div className="flex flex-col xl:flex-row items-center xl:items-center gap-10">
@@ -119,6 +119,8 @@ const BienestarSection = () => {
           </div>
         </div>
       </div>
+      {/* Gradient transition to ImageSection below */}
+      <div className="absolute bottom-0 left-0 right-0 h-[700px] pointer-events-none z-0" style={{ background: 'linear-gradient(to bottom, transparent 0%, rgba(5,10,18,0.05) 25%, rgba(5,10,18,0.2) 45%, rgba(5,10,18,0.55) 65%, rgba(5,10,18,0.85) 82%, #050a12 100%)' }} />
     </section>
   );
 };

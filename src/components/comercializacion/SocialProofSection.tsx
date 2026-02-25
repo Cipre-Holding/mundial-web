@@ -96,14 +96,14 @@ const SocialProofSection = () => {
               className="relative group animate-fade-in relative bg-white/[0.08] backdrop-blur-sm border border-white/10 rounded-2xl p-6 text-center hover:bg-white/[0.12] transition-all duration-300 hover:scale-105 hover:border-amber-500/30"
             >
               <Quote className="h-10 w-10 text-primary mb-4 " />
-              <p className="text-foreground mb-6 italic">"{testimonial.quote}"</p>
+              <p className="text-foreground text-white mb-6 italic">"{testimonial.quote}"</p>
               <div className="flex items-center gap-1 mb-4">
                 {[...Array(testimonial.rating)].map((_, i) => (
                   <Star key={i} className="h-4 w-4 fill-accent text-accent" />
                 ))}
               </div>
               <div>
-                <p className="font-semibold text-foreground">{testimonial.name}</p>
+                <p className="font-semibold text-white">{testimonial.name}</p>
                 <p className="text-sm text-white">{testimonial.business}</p>
                 <p className="text-xs text-white">{testimonial.city}</p>
               </div>
@@ -113,14 +113,14 @@ const SocialProofSection = () => {
 
         {/* Partners */}
         <div className="text-center">
-          <p className="text-sm text-muted-foreground mb-8 uppercase tracking-wider">
+          <p className="text-sm text-muted-foreground text-white mb-8 uppercase tracking-wider">
             Con el respaldo de
           </p>
           <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">
             {partners.map((partner, index) => (
               <div
                 key={index}
-                className="text-xl font-semibold text-muted-foreground/50 hover:text-foreground transition-colors"
+                className="text-xl font-semibold text-white text-muted-foreground/50 hover:text-foreground transition-colors"
               >
                 {partner}
               </div>

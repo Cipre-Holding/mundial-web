@@ -61,7 +61,7 @@ export default {
         mundial: {
           green: "hsl(var(--mundial-green))",
           red: "hsl(var(--mundial-red))",
-          gold: "hsl(var(--mundial-gold))",
+          gold: "hsl(var(--orange-primary))",
           dark: "hsl(var(--mundial-dark))",
           light: "hsl(var(--mundial-light))",
         },
@@ -69,6 +69,10 @@ export default {
           basic: "hsl(var(--plan-basic))",
           featured: "hsl(var(--plan-featured))",
           elite: "hsl(var(--plan-elite))",
+        },
+        customcolors: {
+          redprimary: "hsl(var(--red-primary))",
+          orangeprimary: "hsl(var(--orange-primary))",
         },
       },
       borderRadius: {
@@ -102,8 +106,8 @@ export default {
           to: { opacity: "1", transform: "scale(1)" },
         },
         "pulse-glow": {
-          "0%, 100%": { boxShadow: "0 0 20px hsl(45 93% 47% / 0.3)" },
-          "50%": { boxShadow: "0 0 40px hsl(45 93% 47% / 0.5)" },
+          "0%, 100%": { boxShadow: "0 0 20px var(--orange-primary)" },
+          "50%": { boxShadow: "0 0 40px var(--orange-primary)" },
         },
         "countdown": {
           "0%": { transform: "scale(1)" },
@@ -124,6 +128,7 @@ export default {
       fontFamily: {
         display: ["Inter", "system-ui", "sans-serif"],
         body: ["Inter", "system-ui", "sans-serif"],
+        anton: ["Anton", "sans-serif"],
       },
     },
   },
