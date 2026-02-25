@@ -12,16 +12,16 @@ const FooterSection = () => {
   };
 
   return (
-    <footer className="-mt-10 pt-14 bg-gradient-to-b from-background from-0% to-foreground to-15% text-background">
+    <footer className="-mt-10 pt-14 bg-foreground text-background">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-4">
           {/* Brand */}
           <div className="md:col-span-2">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 bg-accent rounded-xl flex items-center justify-center">
+              <div className="w-10 h-10 bg-accent bg-gradient-orange rounded-xl flex items-center justify-center">
                 <span className="text-xl font-bold text-accent-foreground">⚽</span>
               </div>
-              <span className="text-xl font-bold">Vive México</span>
+              <span className="text-xl font-bold text-customcolors-redprimary">Vive México</span>
             </div>
             <p className="text-background/70 mb-6 max-w-md">
               La plataforma líder para conectar negocios mexicanos con los millones 
@@ -53,13 +53,13 @@ const FooterSection = () => {
               </div>
               <div className="flex flex-col sm:flex-row gap-2 sm:gap-4">
                 <Button
-                  className="bg-gradient-gold hover:opacity-90 text-accent-foreground font-bold shadow-lg w-full sm:w-auto"
+                  className="bg-gradient-orange hover:opacity-90 text-accent-foreground font-bold shadow-lg w-full sm:w-auto"
                   onClick={() => navigate("/descargarapp")}
                 >
                   Descarga la App
                 </Button>
                 <Button
-                  className="bg-gradient-gold hover:opacity-90 text-accent-foreground font-bold shadow-lg w-full sm:w-auto"
+                  className="bg-gradient-orange hover:opacity-90 text-accent-foreground font-bold shadow-lg w-full sm:w-auto"
                   onClick={() => navigate("/auth")}
                 >
                   Admin

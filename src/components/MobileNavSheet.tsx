@@ -30,7 +30,7 @@ interface MobileNavSheetProps {
 const MobileNavSheet = ({
   items,
   className = "",
-  buttonClassName = "bg-gradient-gold hover:opacity-90 text-accent-foreground font-semibold shadow-lg",
+  buttonClassName = "bg-gradient-orange hover:opacity-90 text-accent-foreground font-semibold shadow-lg",
 }: MobileNavSheetProps) => {
   const [open, setOpen] = useState(false);
 

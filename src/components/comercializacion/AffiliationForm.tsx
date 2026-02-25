@@ -484,7 +484,7 @@ const AffiliationForm = ({ selectedPlan, onBack }: AffiliationFormProps) => {
               </CardContent>
             </Card>
 
-            <Card className="bg-gradient-gold border-0">
+            <Card className="bg-gradient-orange border-0">
               <CardContent className="p-6">
                 <div className="flex justify-between items-center">
                   <div>

@@ -76,7 +76,7 @@ const WhyAdvertiseSection = ({ onRegisterClick }: HeroSectionComerciosProps) => 
           </Badge>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
             ¿Por qué anunciarte en la{" "}
-            <span className="bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-500 bg-clip-text text-transparent">
+            <span className="text-gradient-orange bg-clip-text text-transparent">
               App del Mundial?
             </span>
           </h2>

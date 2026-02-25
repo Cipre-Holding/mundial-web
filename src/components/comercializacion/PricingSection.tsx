@@ -83,9 +83,9 @@ const PricingSection = ({ onSelectPlan }: PricingSectionProps) => {
             <Sparkles className="h-4 w-4" />
             Planes de Afiliación
           </span>
-          <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-foreground mb-6 tracking-tight">
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-customcolors-redprimary mb-6 tracking-tight">
             Elige el plan perfecto para{" "}
-            <span className="text-gradient-gold">tu negocio</span>
+            <span className="text-primary">tu negocio</span>
           </h2>
           <p className="text-lg text-muted-foreground">
             Pago único por toda la temporada del Mundial de 2026. Sin mensualidades, sin sorpresas.
@@ -124,7 +124,7 @@ const PricingSection = ({ onSelectPlan }: PricingSectionProps) => {
                     {/* Popular badge */}
                     {isPopular && (
                       <div className="absolute -top-5 left-1/2 -translate-x-1/2">
-                        <span className="bg-gradient-gold text-accent-foreground text-sm font-bold px-6 py-2 rounded-full shadow-lg flex items-center gap-2">
+                        <span className="bg-gradient-orange text-accent-foreground text-sm font-bold px-6 py-2 rounded-full shadow-lg flex items-center gap-2">
                           <Star className="h-4 w-4 fill-current" />
                           Más Popular
                         </span>
@@ -146,7 +146,7 @@ const PricingSection = ({ onSelectPlan }: PricingSectionProps) => {
                         isElite 
                           ? 'bg-accent/20 shadow-lg shadow-accent/20' 
                           : isPopular 
-                            ? 'bg-gradient-gold shadow-lg' 
+                            ? 'bg-gradient-orange shadow-lg' 
                             : 'bg-primary/10'
                       }`}>
                         <Icon className={`h-10 w-10 ${
@@ -176,7 +176,7 @@ const PricingSection = ({ onSelectPlan }: PricingSectionProps) => {
                           isElite 
                             ? 'text-accent' 
                             : isPopular 
-                              ? 'text-gradient-gold' 
+                              ? 'text-gradient-orange' 
                               : 'text-primary'
                         }`}>
                           {plan.price}
@@ -232,7 +232,7 @@ const PricingSection = ({ onSelectPlan }: PricingSectionProps) => {
                         isElite 
                           ? 'bg-accent hover:bg-accent/90 text-accent-foreground shadow-lg shadow-accent/30 hover:shadow-xl hover:shadow-accent/40' 
                           : isPopular 
-                            ? 'bg-gradient-gold hover:opacity-90 text-accent-foreground shadow-lg' 
+                            ? 'bg-gradient-orange hover:opacity-90 text-accent-foreground shadow-lg' 
                             : 'bg-primary hover:bg-primary/90 text-primary-foreground'
                       }`}
                       onClick={() => onSelectPlan(plan.id)}
