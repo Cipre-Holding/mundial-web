@@ -83,9 +83,9 @@ const PricingSection = ({ onSelectPlan }: PricingSectionProps) => {
             <Sparkles className="h-4 w-4" />
             Planes de Afiliación
           </span>
-          <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-foreground mb-6 tracking-tight">
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-customcolors-redprimary mb-6 tracking-tight">
             Elige el plan perfecto para{" "}
-            <span className="text-gradient-orange">tu negocio</span>
+            <span className="text-primary">tu negocio</span>
           </h2>
           <p className="text-lg text-muted-foreground">
             Pago único por toda la temporada del Mundial de 2026. Sin mensualidades, sin sorpresas.

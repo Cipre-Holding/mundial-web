@@ -5,7 +5,7 @@ import bienestarLogo from "@/assets/bienestar-logo.svg";
 const BienestarSection = () => {
 
   return (
-    <section className="relative pt-10 pb-16 overflow-hidden bg-color-white">
+    <section className="relative pt-2 pb-16 overflow-hidden bg-color-white">
       
       <div className="container mx-auto px-2 relative z-10">
         <div className="max-w-7xl mx-auto">
@@ -119,8 +119,6 @@ const BienestarSection = () => {
           </div>
         </div>
       </div>
-      {/* Gradient transition to ImageSection below */}
-      <div className="absolute bottom-0 left-0 right-0 h-[700px] pointer-events-none z-0" style={{ background: 'linear-gradient(to bottom, transparent 0%, rgba(5,10,18,0.05) 25%, rgba(5,10,18,0.2) 45%, rgba(5,10,18,0.55) 65%, rgba(5,10,18,0.85) 82%, #050a12 100%)' }} />
     </section>
   );
 };

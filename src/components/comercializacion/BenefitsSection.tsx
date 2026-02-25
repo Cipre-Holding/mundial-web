@@ -133,7 +133,7 @@ const BenefitsSection = () => {
             <Trophy className="h-4 w-4" />
             Beneficios Exclusivos
           </div>
-          <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-foreground mb-6 tracking-tight">
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-customcolors-redprimary mb-6 tracking-tight">
             Todo lo que necesitas para{" "}
             <span className="text-primary">destacar</span>
           </h2>

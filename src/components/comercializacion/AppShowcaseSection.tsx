@@ -11,11 +11,7 @@ const AppShowcaseSection = () => {
   ];
 
   return (
-    <section className="relative pt-20 pb-8 overflow-hidden bg-color-white">
-
-      {/* Gradient transition from hero section */}
-      <div className="absolute top-0 left-0 right-0 h-[600px] pointer-events-none z-0" style={{ background: 'linear-gradient(to bottom, #050a12 0%, #050a12 20%, rgba(5,10,18,0.85) 45%, rgba(5,10,18,0.4) 70%, transparent 100%)' }} />
-
+    <section className="relative pt-32 pb-16 overflow-hidden bg-gradient-to-b from-[#050a12] from-15% via-[#0a1628] via-55% to-[#050a12] to-100%">
       <div className="container mx-auto px-2 relative z-10">
         {/* Header */}
         <div className="text-center mb-16">

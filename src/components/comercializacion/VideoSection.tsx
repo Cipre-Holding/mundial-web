@@ -10,7 +10,7 @@ const VideoSection = () => {
   const navigate = useNavigate();
 
   return (
-    <section className="relative pt-19 overflow-hidden bg-color-white">
+    <section className="relative pt-24 pb-16 overflow-hidden bg-color-white">
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-5xl mx-auto">

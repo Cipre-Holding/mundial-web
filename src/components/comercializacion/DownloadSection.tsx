@@ -39,12 +39,12 @@ const DownloadSection = () => {
         {/* Phone Mockups */}
         <div className="flex flex-col lg:flex-row items-center justify-center gap-2 lg:gap-8 mb-22 perspective-1000">
           {/* Store buttons - Stacked */}
-          <div className="font-bold flex flex-col gap-4 justify-center items-center">
+          <div className="font-bold flex flex-col gap-4 justify-center items-center lg:w-1/2">
             <h1 className="anton-regular text-center text-8xl md:text-9xl text-redprimary mb-6 text-customcolors-redprimary tracking-tight">
                 Vive México App!
             </h1>
 
-            <p className="text-center text-2xl md:text-3xl lg:text-3.5xl xl:text-4xl text-gradient-orange mb-6 leading-[1.1] animate-fade-in tracking-tight drop-shadow-2xl" style={{ animationDelay: "0.1s" }}>
+            <p className="text-center text-2xl md:text-3xl lg:text-3.5xl xl:text-4xl text-primary mb-6 leading-[1.1] animate-fade-in tracking-tight drop-shadow-2xl" style={{ animationDelay: "0.1s" }}>
               EL FÚTBOL TE MUEVE, PERO TU APP TE GUÍA{" "}
               <span className="relative inline-block">
                 <span className="text-gradient-orange">Partidos, mapas, recompensas y más</span>
@@ -57,7 +57,9 @@ const DownloadSection = () => {
           </div>
 
           {/* Phone - Large */}
-          <img src={cel} className="w-72 h-auto lg:w-90 object-contain lg:-mt-12" />
+          <div className="lg:w-1/2 flex items-center justify-center">
+            <img src={cel} className="w-full max-w-sm lg:max-w-none h-auto object-contain lg:-mt-12" />
+          </div>
         </div>
       </div>
 
