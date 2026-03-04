@@ -58,9 +58,7 @@ Nuestra plataforma es el hub digital oficial de información para el visitante d
 ¿QUÉ GANA SU MARCA?
 
 1. Presencia contextual: Su marca aparece en el momento exacto en que el usuario busca lo que usted ofrece — no como anuncio, sino como solución.
-2. Data de primera mano (first-party data): Acceso a datos de comportamiento, preferencias y geolocalización del visitante, sin depender de cookies de terceros.
-3. Capacidad de retargeting post-evento: La base de usuarios generada durante el Mundial queda activa, permitiendo campañas de reconexión con una audiencia que ya interactuó con su marca.
-4. Métricas reales de impacto: Reportes detallados de impresiones, interacciones y conversiones atribuibles directamente a su inversión.
+2. Capacidad de retargeting post-evento: La base de usuarios generada durante el Mundial queda activa, permitiendo campañas de reconexión con una audiencia que ya interactuó con su marca.
 
 INVERSIÓN
 ${f.proposalDetails}
@@ -91,16 +89,12 @@ BENEFICIOS PARA ${f.city.toUpperCase()}
 • Visibilidad ante audiencia internacional — Su destino aparece como recomendación contextual a millones de visitantes con intención de viaje activa.
 • Extensión de estadía — Al descubrir ${f.city} dentro de la app, el visitante extiende su itinerario — más noches, más consumo local.
 • Derrama económica distribuida — Canalizar flujo turístico hacia comercios, restaurantes, hoteleros y operadores locales.
-• Data turística en tiempo real — Acceso a patrones de búsqueda, interés y desplazamiento del visitante — insumo invaluable para política pública turística.
 • Posicionamiento post-Mundial — La base de usuarios permanece activa, convirtiendo a ${f.city} en referencia para turismo recurrente.
 
 ¿QUÉ INCLUYE LA ALIANZA?
 
 1. Sección dedicada del destino: Perfil completo con atractivos, gastronomía, hospedaje y experiencias únicas de ${f.city}.
-2. Contenido editorial patrocinado: Artículos y guías como "48 horas en ${f.city}: lo que no te puedes perder" integrados en la navegación del usuario.
-3. Geolocalización inteligente: Notificaciones y recomendaciones activadas por proximidad o interés temático del visitante.
-4. Reportes de impacto turístico: Métricas de visualizaciones, interacciones y conversiones atribuibles al destino.
-5. Integración con operadores locales: Conexión directa entre el visitante y los prestadores de servicios turísticos de la región.
+2. Integración con operadores locales: Conexión directa entre el visitante y los prestadores de servicios turísticos de la región.
 
 IMPACTO SOCIAL Y ECONÓMICO
 
@@ -140,15 +134,11 @@ Nuestra plataforma es el hub digital más completo para el visitante del Mundial
 
 1. Perfil destacado en la sección gastronómica — Fotos, menú, ubicación, horarios y enlace directo a reservaciones. El turista lo encuentra sin buscar en otro lado.
 
-2. Visibilidad por geolocalización — Cuando el visitante esté cerca de su zona, recibirá una notificación: "${f.restaurantName}: ${f.cuisineType} auténtica a 5 minutos de ti". Presencia en el momento exacto de decisión.
+2. Visibilidad por geolocalización — Presencia en el momento exacto de decisión cuando el visitante busca restaurantes en su zona.
 
 3. Recomendaciones contextuales — Si el usuario busca "experiencias gastronómicas", "comida típica" o "restaurantes cerca del estadio", su establecimiento aparece orgánicamente en los resultados.
 
-4. Contenido editorial — Inclusión en guías como "Los 10 mejores restaurantes de ${f.cuisineType} en ${f.city}" o "Dónde comer antes del partido". Contenido que el turista comparte y recomienda.
-
-5. Reseñas y validación social — Sección de opiniones verificadas que genera confianza en el visitante que no conoce la zona.
-
-6. Data post-evento — Acceso a métricas de cuántos turistas vieron su perfil, interactuaron y llegaron a su restaurante. Datos reales para medir el retorno de su inversión.
+4. Reseñas y validación social — Sección de opiniones verificadas que genera confianza en el visitante que no conoce la zona.
 
 ¿POR QUÉ AHORA?
 
@@ -186,15 +176,9 @@ EL CONTEXTO PARA HOTELERÍA
 
 2. Banner de máxima visibilidad — "${f.hotelName}: Vive el Mundial desde nuestro lobby" — posición premium en la pantalla principal de la app, visible para miles de turistas buscando alojamiento activamente.
 
-3. Push Notifications geolocalizadas — "¡México juega mañana! ${f.hotelName} tiene habitaciones con vista al fan festival y transmisión en pantalla gigante." Notificaciones que activan reservas de último momento cuando el turista llega a la ciudad.
+3. Listado destacado en directorio — Aparición prioritaria cuando el visitante busca "hotel cerca del estadio", "alojamiento en ${f.city}" o "hotel con transmisión del mundial".
 
-4. Geofencing en puntos de entrada — Cuando el turista aterriza en el aeropuerto o llega a la zona de estadios, recibe: "Bienvenido a ${f.city}. ${f.hotelName} está a 15 minutos — check-in express y late checkout para aficionados."
-
-5. Listado destacado en directorio — Aparición prioritaria cuando el visitante busca "hotel cerca del estadio", "alojamiento en ${f.city}" o "hotel con transmisión del mundial".
-
-6. Video branded — "Vive la experiencia mundialista en ${f.hotelName}" — video profesional mostrando las amenidades del hotel adaptadas al evento: pantallas en cada piso, menú temático, decoración futbolera, spa post-partido.
-
-7. Leads calificados — Base de datos de turistas internacionales que buscaron hospedaje en ${f.city} durante el Mundial. First-party data de altísimo valor para campañas post-evento y fidelización.
+4. Video branded — "Vive la experiencia mundialista en ${f.hotelName}" — video profesional mostrando las amenidades del hotel adaptadas al evento: pantallas en cada piso, menú temático, decoración futbolera, spa post-partido.
 
 LA PROPUESTA DE VALOR DIFERENCIADA
 
@@ -244,13 +228,7 @@ EL CONTEXTO PARA ${f.institutionType.toUpperCase()}
 
 2. Sección financiera dedicada — Perfil completo: ubicación de sucursales y cajeros en ${f.city}, servicios para extranjeros, tipo de cambio en tiempo real, y enlace directo a su app móvil.
 
-3. Notificaciones geolocalizadas — "Sucursal ${f.bankName} a 200m de ti — Retiro sin comisión para tarjetas internacionales." Presencia contextual en el momento y lugar exacto donde el visitante necesita servicios financieros.
-
-4. Contenido educativo financiero — Guías patrocinadas: "Guía financiera para el visitante del Mundial: cómo manejar tu dinero en México", "Los 5 errores que cometen los turistas con el tipo de cambio". Contenido de valor que posiciona a ${f.bankName} como aliado financiero del visitante.
-
-5. Captación de clientes internacionales — El visitante que abre una cuenta digital, contrata un seguro de viaje o descarga su app durante el Mundial es un lead calificado de altísimo valor — un cliente internacional con historial de viaje y capacidad de gasto comprobada.
-
-6. First-party data financiera — Datos de comportamiento: qué servicios financieros busca el turista, en qué zonas, a qué hora, con qué frecuencia. Inteligencia de mercado que no existe en ningún otro canal.
+3. Captación de clientes internacionales — El visitante que abre una cuenta digital, contrata un seguro de viaje o descarga su app durante el Mundial es un lead calificado de altísimo valor — un cliente internacional con historial de viaje y capacidad de gasto comprobada.
 
 ¿POR QUÉ ESTA PLATAFORMA?
 
@@ -297,13 +275,7 @@ LA REALIDAD DEL VISITANTE DEL MUNDIAL
 
 2. Contratación directa desde la app — Integración con su sistema de cotización para que el visitante pueda contratar ${f.coverageType} en menos de 3 minutos, directamente desde la plataforma. Sin intermediarios, sin fricciones.
 
-3. Notificaciones preventivas geolocalizadas — "Vas al partido en el Estadio Azteca mañana. ¿Ya tienes cobertura médica? ${f.insurerName} te protege desde $X USD/día." Mensajes que convierten porque llegan en el contexto exacto de necesidad.
-
-4. Contenido educativo patrocinado — Guías como "Lo que todo turista debe saber sobre salud en México", "5 emergencias médicas comunes en eventos masivos y cómo prevenirlas". Contenido que posiciona a ${f.insurerName} como experto y aliado, no como vendedor.
-
-5. Red de hospitales y clínicas asociadas — Sección dentro de la app que muestra la red médica de ${f.insurerName} en las ciudades sede, con ubicación, especialidades y contacto directo. El asegurado sabe exactamente a dónde ir.
-
-6. Base de datos de altísimo valor — Cada usuario que interactúa con la sección de salud es un lead calificado: viajero internacional, con capacidad de gasto, en situación de vulnerabilidad médica, dispuesto a pagar por tranquilidad. First-party data pura.
+3. Red de hospitales y clínicas asociadas — Sección dentro de la app que muestra la red médica de ${f.insurerName} en las ciudades sede, con ubicación, especialidades y contacto directo. El asegurado sabe exactamente a dónde ir.
 
 EL ARGUMENTO DIFERENCIADOR
 

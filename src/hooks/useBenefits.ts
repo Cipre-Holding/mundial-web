@@ -1,6 +1,21 @@
 import { useQuery } from '@tanstack/react-query';
 import { supabase } from '@/integrations/supabase/client';
 
+/**
+ * Palabras clave que excluyen categorías y beneficios del catálogo.
+ * No mostramos: push notifications, geofencing, contenido editorial ni data/analytics.
+ */
+const EXCLUDED_KEYWORDS = [
+  'push', 'notificación', 'notification', 'geofenc',
+  'contenido', 'content', 'analytics', 'métrica', 'data y', 'data and',
+];
+
+function shouldExclude(name: string | null | undefined): boolean {
+  if (!name) return false;
+  const lower = name.toLowerCase();
+  return EXCLUDED_KEYWORDS.some(kw => lower.includes(kw));
+}
+
 /** Categoría de beneficios del catálogo comercial. */
 export interface BenefitCategory {
   id: string;
@@ -32,6 +47,12 @@ export interface BenefitWithCategory extends Benefit {
  *
  * @returns Query con categorías ordenadas por sort_order
  */
+/**
+ * Obtiene las categorías de beneficios desde Supabase, excluyendo las que no vendemos:
+ * push notifications, geofencing, contenido, data/analytics.
+ *
+ * @returns Query con categorías ordenadas por sort_order (filtradas)
+ */
 export function useBenefitCategories() {
   return useQuery({
     queryKey: ['benefit-categories'],
@@ -41,15 +62,19 @@ export function useBenefitCategories() {
         .select('*')
         .order('sort_order');
       if (error) throw error;
-      return data as BenefitCategory[];
+      const filtered = (data ?? []).filter(
+        (c: BenefitCategory) => !shouldExclude(c.name) && !shouldExclude(c.description)
+      );
+      return filtered as BenefitCategory[];
     },
   });
 }
 
 /**
  * Obtiene los beneficios activos con sus categorías desde Supabase.
+ * Excluye beneficios y categorías no vendidos: push, geofencing, contenido, data/analytics.
  *
- * @returns Query con beneficios activos, ordenados e incluyendo categoría
+ * @returns Query con beneficios activos, ordenados e incluyendo categoría (filtrados)
  */
 export function useBenefits() {
   return useQuery({
@@ -61,11 +86,17 @@ export function useBenefits() {
         .eq('is_active', true)
         .order('sort_order');
       if (error) throw error;
-      return (data ?? []).map((b: any) => ({
+      const mapped = (data ?? []).map((b: any) => ({
         ...b,
         unit_price: Number(b.unit_price),
         category: b.benefit_categories,
       })) as BenefitWithCategory[];
+      const filtered = mapped.filter((b) => {
+        const catExcluded = b.category && (shouldExclude(b.category.name) || shouldExclude(b.category.description));
+        const benefitExcluded = shouldExclude(b.name) || shouldExclude(b.description);
+        return !catExcluded && !benefitExcluded;
+      });
+      return filtered;
     },
   });
 }

@@ -1,7 +1,17 @@
+import { useState } from 'react';
 import { useBenefits, useBenefitCategories } from '@/hooks/useBenefits';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Loader2, Smartphone, MapPin, Star, Video, BarChart3, Package, Globe, Users, TrendingUp, Zap } from 'lucide-react';
+import {
+  Loader2, Smartphone, MapPin, Star, Video, BarChart3, Package, Globe, Users, TrendingUp, Zap,
+  ChevronDown, ChevronUp, FileText, Scale,
+} from 'lucide-react';
+import {
+  getDisplayPrice,
+  getBenefitCommercialDetail,
+  ASPECTOS_COMERCIALES,
+  ASPECTOS_LEGALES,
+} from '@/lib/catalogConstants';
 
 const iconMap: Record<string, React.ElementType> = {
   Smartphone, MapPin, Star, Video, BarChart3, Package,
@@ -26,6 +36,7 @@ const categoryIconColors: Record<number, string> = {
 export default function CatalogPage() {
   const { data: categories, isLoading: loadingCats } = useBenefitCategories();
   const { data: benefits, isLoading: loadingBenefits } = useBenefits();
+  const [expandedBenefitId, setExpandedBenefitId] = useState<string | null>(null);
 
   if (loadingCats || loadingBenefits) {
     return (
@@ -53,7 +64,7 @@ export default function CatalogPage() {
               Contexto para el vendedor
             </Badge>
           </div>
-          
+
           <h2 className="text-xl md:text-2xl font-bold text-foreground mb-3">
             ¿Qué es la App del Mundial 2026?
           </h2>
@@ -117,38 +128,127 @@ export default function CatalogPage() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {catBenefits.map((benefit) => (
-                <Card
-                  key={benefit.id}
-                  className={`bg-gradient-to-br ${categoryColors[colorIndex]} border hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5`}
-                >
-                  <CardHeader className="pb-2">
-                    <CardTitle className="text-base font-semibold text-foreground">
-                      {benefit.name}
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent className="space-y-3">
-                    <p className="text-sm text-muted-foreground leading-relaxed">
-                      {benefit.description}
-                    </p>
-                    <div className="flex items-center justify-between">
-                      <div>
-                        <span className="text-2xl font-bold text-foreground">
-                          ${benefit.unit_price.toLocaleString('es-MX')}
-                        </span>
-                        <span className="text-xs text-muted-foreground ml-1">MXN</span>
+              {catBenefits.map((benefit) => {
+                const isExpanded = expandedBenefitId === benefit.id;
+                const commercialDetail = getBenefitCommercialDetail(benefit.name);
+                const displayPrice = getDisplayPrice(benefit.unit_price);
+
+                return (
+                  <Card
+                    key={benefit.id}
+                    className={`bg-gradient-to-br ${categoryColors[colorIndex]} border hover:shadow-lg transition-all duration-300 overflow-hidden cursor-pointer`}
+                    onClick={() => setExpandedBenefitId(isExpanded ? null : benefit.id)}
+                  >
+                    <CardHeader className="pb-2">
+                      <div className="flex items-start justify-between gap-2">
+                        <CardTitle className="text-base font-semibold text-foreground">
+                          {benefit.name}
+                        </CardTitle>
+                        {commercialDetail && (
+                          <span className="shrink-0 text-muted-foreground">
+                            {isExpanded ? <ChevronUp className="h-4 w-4" /> : <ChevronDown className="h-4 w-4" />}
+                          </span>
+                        )}
                       </div>
-                      <Badge variant="secondary" className="text-xs">
-                        / {benefit.unit_label}
-                      </Badge>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
+                    </CardHeader>
+                    <CardContent className="space-y-3">
+                      <p className="text-sm text-muted-foreground leading-relaxed">
+                        {benefit.description}
+                      </p>
+
+                      {/* Detalle comercial expandible */}
+                      {commercialDetail && isExpanded && (
+                        <div className="rounded-lg bg-background/80 border border-border p-4 space-y-3 text-sm">
+                          <div>
+                            <p className="font-semibold text-foreground mb-1">Oferta comercial</p>
+                            <p className="text-muted-foreground leading-relaxed">
+                              {commercialDetail.ofertaComercial}
+                            </p>
+                          </div>
+                          <div>
+                            <p className="font-semibold text-foreground mb-1">Valor para el cliente</p>
+                            <p className="text-muted-foreground leading-relaxed">
+                              {commercialDetail.valorCliente}
+                            </p>
+                          </div>
+                        </div>
+                      )}
+
+                      <div className="flex items-center justify-between">
+                        <div>
+                          <span className="text-2xl font-bold text-foreground">
+                            ${displayPrice.toLocaleString('es-MX')}
+                          </span>
+                          <span className="text-xs text-muted-foreground ml-1">MXN</span>
+                        </div>
+                        <Badge variant="secondary" className="text-xs">
+                          / {benefit.unit_label}
+                        </Badge>
+                      </div>
+
+                      {commercialDetail && !isExpanded && (
+                        <p className="text-xs text-muted-foreground italic">
+                          Clic para ver detalle comercial
+                        </p>
+                      )}
+                    </CardContent>
+                  </Card>
+                );
+              })}
             </div>
           </div>
         );
       })}
+
+      {/* Puntos a considerar: Aspectos Comerciales y Legales */}
+      <Card className="border-primary/20 bg-gradient-to-br from-muted/30 to-background">
+        <CardHeader>
+          <div className="flex items-center gap-2">
+            <Scale className="h-5 w-5 text-primary" />
+            <CardTitle className="text-xl">Puntos a considerar</CardTitle>
+          </div>
+          <p className="text-sm text-muted-foreground">
+            Condiciones generales, SLA y aspectos legales para cerrar acuerdos
+          </p>
+        </CardHeader>
+        <CardContent className="space-y-6">
+          <div>
+            <h3 className="font-semibold text-foreground mb-3 flex items-center gap-2">
+              <FileText className="h-4 w-4 text-primary" />
+              {ASPECTOS_COMERCIALES.titulo}
+            </h3>
+            <ul className="space-y-2">
+              {ASPECTOS_COMERCIALES.items.map((item, i) => (
+                <li key={i} className="flex gap-2">
+                  <span className="text-primary font-medium shrink-0">•</span>
+                  <div>
+                    <span className="font-medium text-foreground">{item.titulo}:</span>{' '}
+                    <span className="text-muted-foreground">{item.texto}</span>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="border-t border-border pt-6">
+            <h3 className="font-semibold text-foreground mb-3 flex items-center gap-2">
+              <FileText className="h-4 w-4 text-primary" />
+              {ASPECTOS_LEGALES.titulo}
+            </h3>
+            <ul className="space-y-2">
+              {ASPECTOS_LEGALES.items.map((item, i) => (
+                <li key={i} className="flex gap-2">
+                  <span className="text-primary font-medium shrink-0">•</span>
+                  <div>
+                    <span className="font-medium text-foreground">{item.titulo}:</span>{' '}
+                    <span className="text-muted-foreground">{item.texto}</span>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </CardContent>
+      </Card>
     </div>
   );
 }

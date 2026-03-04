@@ -21,6 +21,7 @@ import {
   Smartphone, MapPin, Star, Video, BarChart3, Package, Check,
   Building2, Landmark, UtensilsCrossed, Banknote, ShieldPlus, FileDown, Hotel,
 } from 'lucide-react';
+import { getDisplayPrice } from '@/lib/catalogConstants';
 
 
 const templateIconMap: Record<string, React.ElementType> = {
@@ -89,7 +90,7 @@ export default function ProposalBuilderPage() {
         next[benefit.id] = {
           benefit_id: benefit.id,
           quantity: 1,
-          unit_price: benefit.unit_price,
+          unit_price: getDisplayPrice(benefit.unit_price),
         };
       }
       return next;
@@ -370,7 +371,7 @@ export default function ProposalBuilderPage() {
                             </div>
                             <div className="text-right shrink-0">
                               <p className="font-bold text-foreground">
-                                ${benefit.unit_price.toLocaleString('es-MX')}
+                                ${getDisplayPrice(benefit.unit_price).toLocaleString('es-MX')}
                               </p>
                               <p className="text-xs text-muted-foreground">/ {benefit.unit_label}</p>
                             </div>
@@ -401,7 +402,7 @@ export default function ProposalBuilderPage() {
                                 </Button>
                               </div>
                               <span className="text-sm font-bold text-foreground ml-auto">
-                                ${((selected[benefit.id]?.quantity || 1) * benefit.unit_price).toLocaleString('es-MX')}
+                                ${((selected[benefit.id]?.quantity || 1) * (selected[benefit.id]?.unit_price ?? getDisplayPrice(benefit.unit_price))).toLocaleString('es-MX')}
                               </span>
                             </div>
                           )}
